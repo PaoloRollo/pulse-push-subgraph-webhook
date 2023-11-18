@@ -63,7 +63,7 @@ const main = async () => {
         contentId: content.content_id,
       });
       const contract = new ethers.Contract(
-        "0x8e85933d17b4b2c5b527782e3a982178536c51da",
+        "0xd4d65bb544776f1200ef59793c33c66175668455",
         pulseTokenABI,
         wallet
       );
