@@ -12,7 +12,7 @@ const API_KEY: string = process.env.NFTSTORAGE_PRIVATE_KEY as string;
 
 export async function storeNFT(params: DynamicSVGParameters): Promise<string> {
   const mdText = `# ${params.username} on ${params.platform}\n\n${params.preview}`;
-  const file = fs.readFileSync("./src/text.svg");
+  const file = fs.readFileSync("./src/nft.svg");
 
   const nft = {
     image: new File([file], `nft_${params.contentId}.svg`, {
