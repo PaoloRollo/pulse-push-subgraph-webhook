@@ -12,15 +12,6 @@ const API_KEY: string = process.env.NFTSTORAGE_PRIVATE_KEY as string;
 
 export async function storeNFT(params: DynamicSVGParameters): Promise<string> {
   const mdText = `# ${params.username} on ${params.platform}\n\n${params.preview}`;
-
-  // const convertRes = await convert2img({
-  //   mdText,
-  //   outputFilename: "./src/example.png",
-  //   width: 344,
-  //   height: 344,
-  //   cssTemplate: "github",
-  // });
-
   const file = fs.readFileSync("./src/text.svg");
 
   const nft = {

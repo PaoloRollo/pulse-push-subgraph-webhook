@@ -42,9 +42,7 @@ const main = async () => {
 
     const [contentId, tokenId] = body.split(":");
 
-    if (!contentId.includes("0x")) return;
-
-    const uri = "";
+    if (!(contentId as string).startsWith("0x")) return;
 
     const supabase = createClient(
       process.env.SUPABASE_URL as string,
